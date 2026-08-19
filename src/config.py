@@ -1,5 +1,5 @@
-from pathlib import Path
 import logging
+from pathlib import Path
 
 # Diretórios base
 BASE_DIR = Path(__file__).resolve().parent.parent

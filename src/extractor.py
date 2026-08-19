@@ -24,13 +24,21 @@ def extract_zips(raw_dir: Path = RAW_DIR, uf: str = TARGET_UF) -> None:
             with zipfile.ZipFile(zip_path, "r") as zf:
                 uf_files = [f for f in zf.namelist() if f.upper().endswith(uf_suffix)]
                 if not uf_files:
-                    logger.warning("Nenhum arquivo para a UF '%s' encontrado dentro de '%s'.", uf, zip_path.name)
+                    logger.warning(
+                        "Nenhum arquivo para a UF '%s' encontrado em '%s'.",
+                        uf,
+                        zip_path.name,
+                    )
                     continue
 
                 for file_name in uf_files:
                     dest_file = target_dir / file_name
                     if dest_file.exists():
-                        logger.info("Arquivo '%s' já extraído em '%s'. Pulando.", file_name, target_dir.name)
+                        logger.info(
+                            "Arquivo '%s' já extraído em '%s'. Pulando.",
+                            file_name,
+                            target_dir.name,
+                        )
                         continue
 
                     logger.info("Extraindo '%s' -> '%s/'", file_name, target_dir.name)
@@ -45,6 +53,6 @@ def extract_zips(raw_dir: Path = RAW_DIR, uf: str = TARGET_UF) -> None:
 
 if __name__ == "__main__":
     from src.config import setup_logging
+
     setup_logging()
     extract_zips()
-

@@ -1,5 +1,6 @@
 import logging
 from pathlib import Path
+
 import requests
 
 from src.config import BASE_URL, HEADERS, RAW_DIR, YEARS
@@ -52,6 +53,6 @@ def download_tse_cand(
 
 if __name__ == "__main__":
     from src.config import setup_logging
+
     setup_logging()
     download_tse_cand()
-

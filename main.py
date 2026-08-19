@@ -1,5 +1,5 @@
-from src.config import setup_logging
 from src import downloader, extractor
+from src.config import setup_logging
 
 
 def main() -> None:
