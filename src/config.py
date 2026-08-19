@@ -10,7 +10,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 # Parâmetros de Coleta (TSE)
 BASE_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-YEARS = [2016, 2020, 2024]
+YEARS = [2012, 2016, 2020, 2024]
 TARGET_UF = "SP"
 
 
